@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srijan Labs & Quicksy</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srijan Labs — Innovative Technology & Solutions</title>
+  <style>
+    body {margin: 0; font-family: Arial, sans-serif; color: #333;}
+    header {background: #0a1f44; padding: 0.8rem 2rem; color: white; display: flex; justify-content: space-between; align-items: center;}
+    header .logo {font-size: 1.8rem; font-weight: bold;}
+    nav {display: flex; gap: 1.5rem;}
+    nav a {color: white; text-decoration: none; font-weight: 500;}
+    .hero {background: #e8f1f8; padding: 4rem 2rem; text-align: center;}
+    .hero h1 {font-size: 2.8rem; margin-bottom: 1rem;}
+    .hero p {font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;}
+    .btn {background: #0a1f44; color: white; padding: 0.8rem 1.6rem; text-transform: uppercase; text-decoration: none; font-weight: bold; border-radius: 4px;}
+    .section {padding: 4rem 2rem;}
+    .section h2 {font-size: 2rem; margin-bottom: 1rem; text-align: center;}
+    .cards {display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;}
+    .card {background: #f9f9f9; padding: 1.6rem; border-radius: 6px; width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+    .card h3 {margin-top: 0;}
+    footer {background: #0a1f44; color: #ddd; text-align: center; padding: 1.5rem 2rem; margin-top: 2rem;}
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Srijan Labs</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="quicksy.html">Quicksy</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Welcome to Srijan Labs</h1>
-                <p>Innovative Solutions for Modern Challenges</p>
-                <a href="#services" class="btn btn-primary">Explore Our Services</a>
-            </div>
-        </div>
-    </header>
+<!-- Header -->
+<header>
+  <div class="logo">Srijan Labs</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>Innovation</h3>
-                    <p>Cutting-edge solutions tailored to your needs</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>Performance</h3>
-                    <p>High-speed, reliable, and scalable systems</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔒</div>
-                    <h3>Security</h3>
-                    <p>Enterprise-grade protection for your data</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Mobile First</h3>
-                    <p>Responsive design for all devices</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Hero -->
+<section class="hero">
+  <h1>Turning Ideas into Scalable Digital Solutions</h1>
+  <p>We design and build high-performance software products, secure systems, and mobile-first solutions that empower businesses to compete and succeed in a digital world.</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Get in touch with us today</p>
-            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-        </div>
-    </section>
+<!-- About -->
+<section id="about" class="section">
+  <h2>About Srijan Labs</h2>
+  <p style="max-width: 800px; margin: auto; text-align: center;">
+    Srijan Labs is focused on delivering enterprise-grade software, cutting-edge technology solutions, and robust digital transformations. With a strong emphasis on performance, security, and a mobile-first approach, we partner with businesses to solve complex challenges and drive measurable impact.
+  </p>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Srijan Labs & Quicksy. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Services -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Custom Software Development</h3>
+      <p>Fullstack solutions tailored to your business goals, including APIs, dashboards, and scalable platforms.</p>
+    </div>
+    <div class="card">
+      <h3>Security & Infrastructure</h3>
+      <p>Enterprise-grade security, compliance support, and infrastructure engineering that scales with confidence.</p>
+    </div>
+    <div class="card">
+      <h3>Mobile & Web Experiences</h3>
+      <p>Responsive and performant applications designed to engage users and drive adoption.</p>
+    </div>
+    <div class="card">
+      <h3>Consulting & Strategy</h3>
+      <p>Product strategy, technology roadmaps, and growth-oriented digital transformation consulting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p style="text-align: center;">Reach out to start a conversation about your next project or opportunity.</p>
+  <p style="text-align: center; font-weight: bold;">Email: contact@srijanlabs.in | Phone: +91-XXXXXXXXXX</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2026 Srijan Labs. All rights reserved.
+</footer>
+
 </body>
 </html>
