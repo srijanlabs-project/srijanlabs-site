@@ -1,1 +1,74 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Srijan Labs & Quicksy</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }\n        header { background-color: #FF7F50; padding: 10px 0; }\n        nav { display: flex; justify-content: space-around; }\n        nav a { color: white; text-decoration: none; padding: 14px 20px; }\n        .hero { background-color: #8B4513; color: white; padding: 50px 20px; text-align: center; }\n        .container { padding: 20px; }\n        footer { background-color: #FF7F50; color: white; text-align: center; padding: 10px 0; position: absolute; bottom: 0; width: 100%; }\n    </style>\n</head>\n<body>\n    <header>\n        <nav>\n            <a href="#home">Home</a>\n            <a href="#about">About Us</a>\n            <a href="#services">Services</a>\n            <a href="#contact">Contact</a>\n        </nav>\n    </header>\n    <section class="hero">\n        <h1>Welcome to Srijan Labs & Quicksy</h1>\n        <p>Your partner in technology and innovation.</p>\n    </section>\n    <div class="container">\n        <section id="about">\n            <h2>About Us</h2>\n            <p>Srijan Labs is dedicated to providing cutting-edge solutions that empower businesses.</p>\n        </section>\n        <section id="services">\n            <h2>What We Do</h2>\n            <p>We specialize in software development, project management, and IT consultancy.</p>\n        </section>\n        <section id="contact">\n            <h2>Contact Us</h2>\n            <p>Get in touch with us for more information.</p>\n        </section>\n    </div>\n    <footer>\n        <p>&copy; 2026 Srijan Labs & Quicksy</p>\n    </footer>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijan Labs & Quicksy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Srijan Labs</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="quicksy.html">Quicksy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Srijan Labs</h1>
+                <p>Innovative Solutions for Modern Challenges</p>
+                <a href="#services" class="btn btn-primary">Explore Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge solutions tailored to your needs</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Performance</h3>
+                    <p>High-speed, reliable, and scalable systems</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Security</h3>
+                    <p>Enterprise-grade protection for your data</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile First</h3>
+                    <p>Responsive design for all devices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Get in touch with us today</p>
+            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Srijan Labs & Quicksy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
