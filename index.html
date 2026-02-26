@@ -1,85 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Srijan Labs — Innovative Technology & Solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srijan Labs | Digital Product Innovation Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {margin: 0; font-family: Arial, sans-serif; color: #333;}
-    header {background: #0a1f44; padding: 0.8rem 2rem; color: white; display: flex; justify-content: space-between; align-items: center;}
-    header .logo {font-size: 1.8rem; font-weight: bold;}
-    nav {display: flex; gap: 1.5rem;}
-    nav a {color: white; text-decoration: none; font-weight: 500;}
-    .hero {background: #e8f1f8; padding: 4rem 2rem; text-align: center;}
-    .hero h1 {font-size: 2.8rem; margin-bottom: 1rem;}
-    .hero p {font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;}
-    .btn {background: #0a1f44; color: white; padding: 0.8rem 1.6rem; text-transform: uppercase; text-decoration: none; font-weight: bold; border-radius: 4px;}
-    .section {padding: 4rem 2rem;}
-    .section h2 {font-size: 2rem; margin-bottom: 1rem; text-align: center;}
-    .cards {display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;}
-    .card {background: #f9f9f9; padding: 1.6rem; border-radius: 6px; width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
-    .card h3 {margin-top: 0;}
-    footer {background: #0a1f44; color: #ddd; text-align: center; padding: 1.5rem 2rem; margin-top: 2rem;}
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; color:#1a1a1a; line-height:1.6; background:#f8f9fb; }
+    header { background:#0f172a; color:#fff; padding:20px 60px; display:flex; justify-content:space-between; align-items:center; }
+    header h1 { font-size:22px; font-weight:700; }
+    nav a { color:#fff; margin-left:25px; text-decoration:none; font-weight:500; font-size:14px; }
+    .hero { padding:100px 60px; background:#ffffff; }
+    .hero h2 { font-size:42px; max-width:800px; margin-bottom:25px; }
+    .hero p { max-width:750px; font-size:18px; color:#444; }
+    .section { padding:80px 60px; }
+    .section h3 { font-size:30px; margin-bottom:30px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+    .card { background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+    .card h4 { margin-bottom:15px; font-size:18px; }
+    .philosophy { background:#0f172a; color:#fff; padding:80px 60px; }
+    .philosophy ul { list-style:none; font-size:18px; }
+    .philosophy li { margin-bottom:15px; }
+    .quicksy { background:#ffffff; }
+    footer { background:#0f172a; color:#aaa; text-align:center; padding:25px; font-size:14px; }
+    .cta { margin-top:30px; }
+    .cta a { background:#0f172a; color:#fff; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:600; }
+    @media(max-width:768px){
+      header, .hero, .section, .philosophy { padding:40px 25px; }
+      .hero h2 { font-size:30px; }
+    }
   </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
-  <div class="logo">Srijan Labs</div>
+  <h1>Srijan Labs</h1>
   <nav>
     <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#services">What We Do</a>
+    <a href="#quicksy">Quicksy</a>
   </nav>
 </header>
 
-<!-- Hero -->
 <section class="hero">
-  <h1>Turning Ideas into Scalable Digital Solutions</h1>
-  <p>We design and build high-performance software products, secure systems, and mobile-first solutions that empower businesses to compete and succeed in a digital world.</p>
-  <a href="#contact" class="btn">Get in Touch</a>
+  <h2>Building Scalable, Revenue-Driven Digital Platforms for India’s Next Growth Wave</h2>
+  <p>
+    Srijan Labs is a digital product innovation studio focused on building scalable, revenue-driven platforms for hyperlocal commerce, FMCG brands, and traditional businesses transitioning into the digital economy.
+  </p>
+  <div class="cta">
+    <a href="#services">Explore Our Work</a>
+  </div>
 </section>
 
-<!-- About -->
 <section id="about" class="section">
-  <h2>About Srijan Labs</h2>
-  <p style="max-width: 800px; margin: auto; text-align: center;">
-    Srijan Labs is focused on delivering enterprise-grade software, cutting-edge technology solutions, and robust digital transformations. With a strong emphasis on performance, security, and a mobile-first approach, we partner with businesses to solve complex challenges and drive measurable impact.
+  <h3>Our Thesis</h3>
+  <p style="max-width:900px; font-size:18px;">
+    Founded with a clear thesis — India’s next growth wave will come from digitizing local commerce and operationally unstructured sectors — Srijan Labs operates at the intersection of product strategy, execution, and go-to-market enablement.
   </p>
 </section>
 
-<!-- Services -->
 <section id="services" class="section">
-  <h2>Our Services</h2>
-  <div class="cards">
+  <h3>What We Do</h3>
+  <div class="grid">
     <div class="card">
-      <h3>Custom Software Development</h3>
-      <p>Fullstack solutions tailored to your business goals, including APIs, dashboards, and scalable platforms.</p>
+      <h4>Build Digital Products from Scratch</h4>
+      <p>From zero to launch — product discovery, UX architecture, backend systems, and growth loops.</p>
     </div>
     <div class="card">
-      <h3>Security & Infrastructure</h3>
-      <p>Enterprise-grade security, compliance support, and infrastructure engineering that scales with confidence.</p>
+      <h4>Hyperlocal Commerce Enablement</h4>
+      <p>Ordering systems, distribution visibility, inventory intelligence, and assisted commerce workflows.</p>
     </div>
     <div class="card">
-      <h3>Mobile & Web Experiences</h3>
-      <p>Responsive and performant applications designed to engage users and drive adoption.</p>
+      <h4>FMCG GTM Acceleration</h4>
+      <p>Digitally enabling General Trade (GT), distributor networks, and last-mile execution.</p>
     </div>
     <div class="card">
-      <h3>Consulting & Strategy</h3>
-      <p>Product strategy, technology roadmaps, and growth-oriented digital transformation consulting.</p>
+      <h4>Digital Transformation for SMEs</h4>
+      <p>Process digitization, workflow automation, and performance dashboards.</p>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p style="text-align: center;">Reach out to start a conversation about your next project or opportunity.</p>
-  <p style="text-align: center; font-weight: bold;">Email: contact@srijanlabs.in | Phone: +91-XXXXXXXXXX</p>
+<section class="philosophy">
+  <h3>Core Philosophy</h3>
+  <ul>
+    <li>Execution &gt; theory</li>
+    <li>Business impact &gt; vanity metrics</li>
+    <li>Structured systems &gt; jugaad</li>
+    <li>Long-term scale &gt; short-term hacks</li>
+  </ul>
+  <p style="margin-top:30px; max-width:900px;">
+    Srijan Labs operates lean but thinks big. The focus is not on building apps — it is on building operating systems for businesses.
+  </p>
 </section>
 
-<!-- Footer -->
+<section id="quicksy" class="section quicksy">
+  <h3>Quicksy</h3>
+  <p style="max-width:900px; font-size:18px;">
+    Quicksy is a WhatsApp-first hyperlocal ordering and automation platform built to simplify how neighborhood businesses accept, process, and fulfill orders.
+  </p>
+  <p style="max-width:900px; margin-top:15px;">
+    It bridges a massive gap: Local retailers and manufacturers still operate on calls, manual entries, and fragmented systems — while customers expect instant, structured, digital ordering.
+  </p>
+  <h4 style="margin-top:40px;">What Quicksy Does</h4>
+  <div class="grid" style="margin-top:20px;">
+    <div class="card"><p>Enables customers to place orders directly via WhatsApp</p></div>
+    <div class="card"><p>Converts natural language into structured orders</p></div>
+    <div class="card"><p>Manages SKU mapping, pricing, and brand variations</p></div>
+    <div class="card"><p>Automates order confirmation and tracking</p></div>
+    <div class="card"><p>Reduces manual errors and operational friction</p></div>
+  </div>
+
+  <h4 style="margin-top:50px;">Why It Matters</h4>
+  <p style="max-width:900px; margin-top:15px;">
+    India’s hyperlocal economy runs on trust and relationships — but it lacks structured digital infrastructure. Quicksy brings automation without complexity, structure without disrupting workflows, and digital capability without forcing adoption of heavy apps.
+  </p>
+  <p style="max-width:900px; margin-top:15px;">
+    It is lightweight, scalable, and built for Bharat as much as for urban India.
+  </p>
+
+  <h4 style="margin-top:50px;">Strategic Vision</h4>
+  <p style="max-width:900px; margin-top:15px;">
+    Quicksy is not just a chatbot. It is evolving into a commerce layer for neighborhood brands, a GT digitization tool for FMCG, and a transaction intelligence engine for small businesses.
+  </p>
+  <p style="max-width:900px; margin-top:15px;">
+    Where most startups chase metro users, Quicksy focuses on enabling the backbone of India’s retail economy.
+  </p>
+</section>
+
 <footer>
   © 2026 Srijan Labs. All rights reserved.
 </footer>
