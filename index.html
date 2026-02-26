@@ -9,20 +9,33 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family: 'Inter', sans-serif; color:#1a1a1a; line-height:1.6; background:#f8f9fb; }
     header { background:#0f172a; color:#fff; padding:20px 60px; display:flex; justify-content:space-between; align-items:center; }
-    header h1 { font-size:22px; font-weight:700; }
+    header img { height:40px; }
     nav a { color:#fff; margin-left:25px; text-decoration:none; font-weight:500; font-size:14px; }
-    .hero { padding:100px 60px; background:#ffffff; }
+    .hero { padding:100px 60px; background:#ffffff; position:relative; overflow:hidden; }
     .hero h2 { font-size:42px; max-width:800px; margin-bottom:25px; }
     .hero p { max-width:750px; font-size:18px; color:#444; }
+    .graphic-circle {
+      position:absolute;
+      width:400px;
+      height:400px;
+      background:linear-gradient(135deg,#ff7a18,#ffb347);
+      border-radius:50%;
+      top:-150px;
+      right:-150px;
+      opacity:0.08;
+    }
     .section { padding:80px 60px; }
     .section h3 { font-size:30px; margin-bottom:30px; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
-    .card { background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+    .card { background:#ffffff; padding:30px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.05); transition:0.3s; }
+    .card:hover { transform:translateY(-5px); }
     .card h4 { margin-bottom:15px; font-size:18px; }
     .philosophy { background:#0f172a; color:#fff; padding:80px 60px; }
     .philosophy ul { list-style:none; font-size:18px; }
     .philosophy li { margin-bottom:15px; }
     .quicksy { background:#ffffff; }
+    .quicksy-logo { margin-bottom:30px; }
+    .quicksy-logo img { max-height:70px; }
     footer { background:#0f172a; color:#aaa; text-align:center; padding:25px; font-size:14px; }
     .cta { margin-top:30px; }
     .cta a { background:#0f172a; color:#fff; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:600; }
@@ -35,7 +48,8 @@
 <body>
 
 <header>
-  <h1>Srijan Labs</h1>
+  <!-- Replace with your actual logo file path -->
+  <img src="/srijan-labs.png" alt="Srijan Labs Logo" />
   <nav>
     <a href="#about">About</a>
     <a href="#services">What We Do</a>
@@ -44,6 +58,7 @@
 </header>
 
 <section class="hero">
+  <div class="graphic-circle"></div>
   <h2>Building Scalable, Revenue-Driven Digital Platforms for India’s Next Growth Wave</h2>
   <p>
     Srijan Labs is a digital product innovation studio focused on building scalable, revenue-driven platforms for hyperlocal commerce, FMCG brands, and traditional businesses transitioning into the digital economy.
@@ -96,13 +111,15 @@
 </section>
 
 <section id="quicksy" class="section quicksy">
-  <h3>Quicksy</h3>
+  <div class="quicksy-logo">
+    <!-- Replace with your actual logo file path -->
+    <img src="/logo.png" alt="Quicksy Logo" />
+  </div>
+
   <p style="max-width:900px; font-size:18px;">
     Quicksy is a WhatsApp-first hyperlocal ordering and automation platform built to simplify how neighborhood businesses accept, process, and fulfill orders.
   </p>
-  <p style="max-width:900px; margin-top:15px;">
-    It bridges a massive gap: Local retailers and manufacturers still operate on calls, manual entries, and fragmented systems — while customers expect instant, structured, digital ordering.
-  </p>
+
   <h4 style="margin-top:40px;">What Quicksy Does</h4>
   <div class="grid" style="margin-top:20px;">
     <div class="card"><p>Enables customers to place orders directly via WhatsApp</p></div>
@@ -112,21 +129,27 @@
     <div class="card"><p>Reduces manual errors and operational friction</p></div>
   </div>
 
-  <h4 style="margin-top:50px;">Why It Matters</h4>
-  <p style="max-width:900px; margin-top:15px;">
-    India’s hyperlocal economy runs on trust and relationships — but it lacks structured digital infrastructure. Quicksy brings automation without complexity, structure without disrupting workflows, and digital capability without forcing adoption of heavy apps.
-  </p>
-  <p style="max-width:900px; margin-top:15px;">
-    It is lightweight, scalable, and built for Bharat as much as for urban India.
-  </p>
-
   <h4 style="margin-top:50px;">Strategic Vision</h4>
   <p style="max-width:900px; margin-top:15px;">
-    Quicksy is not just a chatbot. It is evolving into a commerce layer for neighborhood brands, a GT digitization tool for FMCG, and a transaction intelligence engine for small businesses.
+    Quicksy is evolving into a commerce layer for neighborhood brands, a GT digitization tool for FMCG, and a transaction intelligence engine for small businesses.
   </p>
-  <p style="max-width:900px; margin-top:15px;">
-    Where most startups chase metro users, Quicksy focuses on enabling the backbone of India’s retail economy.
+</section>
+
+<section class="section">
+  <h3>Founder</h3>
+  <p style="max-width:900px; font-size:18px; line-height:1.8;">
+    Srijan Labs is founded by Rahul Prakash, a product and digital transformation leader with extensive experience across high-growth consumer and commerce platforms. Over the years, he has led product innovation, omnichannel commerce initiatives, and large-scale digital programs across organizations such as Magicbricks, Future Group, Jiomart, Praxis, and Broadway. His work has focused on building high-traffic platforms, scaling revenue engines, and enabling structured digital transformation in retail and real estate ecosystems. At Srijan Labs, he brings this execution-first mindset to help businesses build scalable, impact-driven digital operating systems.
   </p>
+</section>
+
+<section class="section" style="background:#f1f5f9;">
+  <h3>Contact Us</h3>
+  <div style="max-width:700px; font-size:18px; line-height:1.8;">
+    <p><strong>Srijan Labs</strong></p>
+    <p>Email: <a href="mailto:Rahul@srijanlabs.in">Rahul@srijanlabs.in</a></p>
+    <p>Mobile: 9321471113 / 9818671113</p>
+    <p>Location: Navi Mumbai</p>
+  </div>
 </section>
 
 <footer>
