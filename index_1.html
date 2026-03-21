@@ -235,118 +235,19 @@ h1 em { font-style: italic; color: var(--orange); }
 .contact-info-val a { color: var(--orange); text-decoration: none; }
 .contact-info-val a:hover { text-decoration: underline; }
 
-/* ── LEFT: Info Panel ── */
-.info-panel { }
-.info-eyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); display: flex; align-items: center; gap: 7px; margin-bottom: 16px; }
-.info-eyebrow::before { content: ''; width: 18px; height: 2px; background: var(--orange); }
-.info-panel h1 { font-family: 'Instrument Serif', serif; font-size: 40px; font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; color: var(--ink); margin-bottom: 14px; }
-.info-panel h1 em { font-style: italic; color: var(--orange); }
-.info-desc { font-size: 15px; color: var(--ink-muted); line-height: 1.75; margin-bottom: 36px; }
- 
-.contact-cards { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
-.contact-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; display: flex; align-items: center; gap: 14px; transition: all 0.18s; }
-.contact-card:hover { border-color: var(--orange-border); background: var(--orange-light); }
-.cc-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--orange-light); border: 1px solid var(--orange-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.cc-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 3px; }
-.cc-val { font-size: 14px; font-weight: 500; color: var(--ink); }
-.cc-val a { color: var(--orange); text-decoration: none; }
-.cc-val a:hover { text-decoration: underline; }
- 
-/* Products we offer */
-.products-we-offer { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-.pwo-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 14px; }
-.pwo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.pwo-item { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-soft); display: flex; align-items: center; gap: 8px; transition: all 0.15s; cursor: default; }
-.pwo-item:hover { border-color: var(--orange-border); background: var(--orange-light); }
-.pwo-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.pwo-name { font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
-.pwo-sub { font-size: 11px; color: var(--ink-dim); }
- 
-/* ── RIGHT: Form Card ── */
-.form-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-lg); }
-.fc-header { margin-bottom: 24px; }
-.fc-title { font-family: 'Instrument Serif', serif; font-size: 24px; color: var(--ink); margin-bottom: 5px; }
-.fc-sub { font-size: 13.5px; color: var(--ink-muted); }
- 
-/* Form elements */
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.form-field { margin-bottom: 16px; }
-.form-label { font-size: 12px; font-weight: 600; color: var(--ink-2); margin-bottom: 6px; display: block; letter-spacing: 0.03em; text-transform: uppercase; }
-.form-label .req { color: var(--orange); margin-left: 2px; }
-.form-input {
-  width: 100%; padding: 11px 14px;
-  font-family: 'Geist', sans-serif; font-size: 14px; color: var(--ink);
-  background: var(--bg-soft); border: 1.5px solid var(--border-2);
-  border-radius: var(--radius-sm); outline: none; transition: all 0.18s;
-}
-.form-input:focus { border-color: var(--orange); background: var(--bg); box-shadow: 0 0 0 3px rgba(232,96,26,0.1); }
+/* Contact form card */
+.contact-form-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+.cfc-title { font-family: 'Instrument Serif', serif; font-size: 22px; color: var(--ink); margin-bottom: 6px; }
+.cfc-sub { font-size: 13px; color: var(--ink-muted); margin-bottom: 22px; }
+.form-field { margin-bottom: 14px; }
+.form-label { font-size: 12px; font-weight: 600; color: var(--ink-2); margin-bottom: 6px; display: block; letter-spacing: 0.03em; }
+.form-input { width: 100%; padding: 10px 13px; font-family: 'Geist', sans-serif; font-size: 14px; color: var(--ink); background: var(--bg); border: 1.5px solid var(--border-2); border-radius: var(--radius-sm); outline: none; transition: all 0.15s; }
+.form-input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(232,96,26,0.1); }
 .form-input::placeholder { color: var(--ink-dim); }
-.form-input.error { border-color: var(--red); background: var(--red-light); }
-textarea.form-input { resize: vertical; min-height: 100px; }
-select.form-input { cursor: pointer; }
- 
-/* Interest checkboxes */
-.checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.checkbox-item { display: flex; align-items: center; gap: 8px; cursor: pointer; }
-.checkbox-item input[type="checkbox"] { display: none; }
-.custom-check {
-  width: 18px; height: 18px; border-radius: 5px; flex-shrink: 0;
-  border: 1.5px solid var(--border-2); background: var(--bg-soft);
-  display: flex; align-items: center; justify-content: center;
-  transition: all 0.15s;
-}
-.checkbox-item input:checked + .custom-check {
-  background: var(--orange); border-color: var(--orange);
-}
-.checkbox-item input:checked + .custom-check::after {
-  content: '';
-  width: 9px; height: 5px;
-  border-left: 2px solid #fff; border-bottom: 2px solid #fff;
-  transform: rotate(-45deg) translate(0px, -1px);
-  display: block;
-}
-.checkbox-label { font-size: 13px; color: var(--ink-2); font-weight: 500; display: flex; align-items: center; gap: 6px; }
-.check-dot { width: 6px; height: 6px; border-radius: 50%; }
- 
-/* Submit button */
-.btn-submit {
-  width: 100%; padding: 14px;
-  font-family: 'Geist', sans-serif; font-size: 15px; font-weight: 600;
-  background: var(--orange); color: #fff; border: none;
-  border-radius: var(--radius-sm); cursor: pointer;
-  box-shadow: 0 3px 12px rgba(232,96,26,0.3);
-  transition: all 0.18s; margin-top: 8px;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-}
-.btn-submit:hover:not(:disabled) { background: #cc4f10; transform: translateY(-1px); box-shadow: 0 5px 18px rgba(232,96,26,0.38); }
-.btn-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
- 
-/* Loading spinner */
-.spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.4); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
- 
-/* ── RESPONSE PANEL ── */
-.response-panel { margin-top: 20px; border-radius: var(--radius-sm); padding: 18px 20px; display: none; }
-.response-panel.visible { display: block; }
-.response-panel.success { background: var(--green-light); border: 1.5px solid var(--green-border); }
-.response-panel.error-state { background: var(--red-light); border: 1.5px solid #fca5a5; }
-.rp-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.rp-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-.rp-title { font-size: 14px; font-weight: 700; }
-.response-panel.success .rp-title { color: var(--green); }
-.response-panel.error-state .rp-title { color: var(--red); }
-.rp-body { font-size: 13.5px; line-height: 1.65; color: var(--ink-muted); }
- 
-/* AI Response typing area */
-.ai-response-area { background: var(--bg); border: 1px solid var(--green-border); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 12px; }
-.ai-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-.ai-label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: blink 1.5s ease-in-out infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-.ai-text { font-size: 14px; color: var(--ink-2); line-height: 1.7; white-space: pre-wrap; }
- 
-/* Validation message */
-.field-error { font-size: 11.5px; color: var(--red); margin-top: 4px; display: none; }
-.field-error.visible { display: block; }
+textarea.form-input { resize: vertical; min-height: 90px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.btn-form { width: 100%; padding: 12px; font-family: 'Geist', sans-serif; font-size: 14px; font-weight: 600; background: var(--orange); color: #fff; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.18s; box-shadow: 0 3px 10px rgba(232,96,26,0.28); margin-top: 4px; }
+.btn-form:hover { background: #cc4f10; transform: translateY(-1px); }
 
 /* ── CTA BANNER ── */
 .cta-section { padding: 0 48px 80px; }
@@ -413,7 +314,7 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
     </div>
   </div>
   <div class="nav-right">
- <!--   <a href="#" class="btn-nav-ghost">Sign In</a> -->
+    <a href="#" class="btn-nav-ghost">Sign In</a>
     <a href="#contact" class="btn-nav-primary">Get Started</a>
   </div>
 </nav>
@@ -576,7 +477,7 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
           </div>
         </div>
         <div class="pc-footer-bar">
-      <!--    <a href="#" class="pc-cta">Explore Quicksy <span>→</span></a> -->
+          <a href="#" class="pc-cta">Explore Quicksy <span>→</span></a>
           <span style="font-size:11.5px;color:var(--ink-dim)">WhatsApp-first</span>
         </div>
       </div>
@@ -641,16 +542,17 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
             <span class="pc-pill pill-teal">Flagship</span>
           </div>
           <div class="pc-name">Quotsy</div>
-          <p class="pc-tagline">Professional quotation and billing workflows for growing MSME teams. Faster quotations, and seamless quote-to-invoice conversion built for digitization.</p>
+          <p class="pc-tagline">Professional quotation and billing workflows for growing MSME teams. Faster quotations, GST compliance, and seamless quote-to-invoice conversion built for digitization.</p>
           <div class="pc-feats">
             <div class="pc-feat"><span class="feat-dot fd-teal"></span>Quotation generation</div>
             <div class="pc-feat"><span class="feat-dot fd-teal"></span>Customer database</div>
+            <div class="pc-feat"><span class="feat-dot fd-teal"></span>GST ready workflow</div>
             <div class="pc-feat"><span class="feat-dot fd-teal"></span>Multi-user access</div>
           </div>
         </div>
         <div class="pc-footer-bar">
-       <!--   <a href="#" class="pc-cta teal">Explore Quotsy <span>→</span></a> -->
-   <!--       <span style="font-size:11.5px;color:var(--ink-dim)">GST compliant</span> -->
+          <a href="#" class="pc-cta teal">Explore Quotsy <span>→</span></a>
+          <span style="font-size:11.5px;color:var(--ink-dim)">GST compliant</span>
         </div>
       </div>
 
@@ -730,7 +632,7 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
           </div>
         </div>
         <div class="pc-footer-bar">
-      <!--    <a href="#" class="pc-cta amber">Explore Stocksy <span>→</span></a>  -->
+          <a href="#" class="pc-cta amber">Explore Stocksy <span>→</span></a>
           <span style="font-size:11.5px;color:var(--ink-dim)">Construction-first</span>
         </div>
       </div>
@@ -803,7 +705,7 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
           </div>
         </div>
         <div class="pc-footer-bar">
-       <!--   <a href="#" class="pc-cta violet">Explore QuoteIQ <span>→</span></a> -->
+          <a href="#" class="pc-cta violet">Explore QuoteIQ <span>→</span></a>
           <span style="font-size:11.5px;color:var(--ink-dim)">AI-native</span>
         </div>
       </div>
@@ -1075,7 +977,7 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
 </section>
 
 <!-- ══════════════════ CONTACT ══════════════════ -->
-<!-- <section class="contact-section" id="contact">
+<section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="contact-left">
       <div class="sec-label reveal">Contact Us</div>
@@ -1148,361 +1050,7 @@ footer { background: var(--bg-soft); border-top: 1px solid var(--border); paddin
       <button class="btn-form">Send Message →</button>
     </div>
   </div>
-</section>  -->
-
-
-  <div class="page">
- 
-  <!-- LEFT INFO PANEL -->
-  <div class="info-panel">
-    <div class="info-eyebrow">Contact Us</div>
-    <h1>Let's build the right platform for your <em>business.</em></h1>
-    <p class="info-desc">Whether you're exploring Quicksy, Quotsy, Stocksy, or need a custom platform — we'd love to hear from you. Fill in the form and our team will get back to you within 24 hours.</p>
- 
-    <div class="contact-cards">
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg width="18" height="18" fill="none" stroke="#e8601a" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div>
-          <div class="cc-label">Email</div>
-          <div class="cc-val"><a href="mailto:Rahul@srijanlabs.in">Rahul@srijanlabs.in</a></div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg width="18" height="18" fill="none" stroke="#e8601a" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.27 12 19.79 19.79 0 011.2 3.42 2 2 0 013.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <div>
-          <div class="cc-label">Mobile</div>
-          <div class="cc-val">9321471113 &nbsp;/&nbsp; 9818671113</div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="cc-icon">
-          <svg width="18" height="18" fill="none" stroke="#e8601a" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div>
-          <div class="cc-label">Location</div>
-          <div class="cc-val">Navi Mumbai, Maharashtra, India</div>
-        </div>
-      </div>
-    </div>
- 
-    <div class="products-we-offer">
-      <div class="pwo-title">Our Products</div>
-      <div class="pwo-grid">
-        <div class="pwo-item">
-          <span class="pwo-dot" style="background:#e8601a"></span>
-          <div><div class="pwo-name">Quicksy</div><div class="pwo-sub">Commerce</div></div>
-        </div>
-        <div class="pwo-item">
-          <span class="pwo-dot" style="background:#167a66"></span>
-          <div><div class="pwo-name">Quotsy</div><div class="pwo-sub">Quotation & Billing</div></div>
-        </div>
-        <div class="pwo-item">
-          <span class="pwo-dot" style="background:#c47c1a"></span>
-          <div><div class="pwo-name">Stocksy</div><div class="pwo-sub">Construction</div></div>
-        </div>
-        <div class="pwo-item">
-          <span class="pwo-dot" style="background:#6b3fa0"></span>
-          <div><div class="pwo-name">QuoteIQ</div><div class="pwo-sub">AI Intelligence</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- RIGHT FORM CARD -->
-  <div class="form-card">
-    <div class="fc-header">
-      <div class="fc-title">Send us a message</div>
-      <div class="fc-sub">We typically respond within 24 hours. All fields marked <span style="color:var(--orange)">*</span> are required.</div>
-    </div>
- 
-    <div id="contactForm">
-      <div class="form-row">
-        <div class="form-field">
-          <label class="form-label">Your Name <span class="req">*</span></label>
-          <input type="text" id="name" class="form-input" placeholder="Rahul Sharma">
-          <div class="field-error" id="nameErr">Please enter your name.</div>
-        </div>
-        <div class="form-field">
-          <label class="form-label">Mobile Number <span class="req">*</span></label>
-          <input type="tel" id="mobile" class="form-input" placeholder="9XXXXXXXXX">
-          <div class="field-error" id="mobileErr">Please enter a valid 10-digit mobile number.</div>
-        </div>
-      </div>
- 
-      <div class="form-row">
-        <div class="form-field">
-          <label class="form-label">Email Address <span class="req">*</span></label>
-          <input type="email" id="email" class="form-input" placeholder="you@yourbusiness.com">
-          <div class="field-error" id="emailErr">Please enter a valid email address.</div>
-        </div>
-        <div class="form-field">
-          <label class="form-label">Business / Company</label>
-          <input type="text" id="company" class="form-input" placeholder="Your business name">
-        </div>
-      </div>
- 
-      <div class="form-field">
-        <label class="form-label">Business Type</label>
-        <select id="bizType" class="form-input">
-          <option value="">Select your business type</option>
-          <option>Retail & Quick Commerce</option>
-          <option>Manufacturing</option>
-          <option>Distribution</option>
-          <option>B2B Trade</option>
-          <option>Construction & Real Estate</option>
-          <option>Service Business</option>
-          <option>Digital-First Startup</option>
-          <option>Other</option>
-        </select>
-      </div>
- 
-      <div class="form-field">
-        <label class="form-label">I'm interested in <span class="req">*</span></label>
-        <div class="checkbox-grid">
-          <label class="checkbox-item">
-            <input type="checkbox" name="interest" value="Quicksy">
-            <div class="custom-check"></div>
-            <span class="checkbox-label"><span class="check-dot" style="background:#e8601a"></span>Quicksy — Commerce</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="interest" value="Quotsy">
-            <div class="custom-check"></div>
-            <span class="checkbox-label"><span class="check-dot" style="background:#167a66"></span>Quotsy — Quotation</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="interest" value="Stocksy">
-            <div class="custom-check"></div>
-            <span class="checkbox-label"><span class="check-dot" style="background:#c47c1a"></span>Stocksy — Construction</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="interest" value="QuoteIQ">
-            <div class="custom-check"></div>
-            <span class="checkbox-label"><span class="check-dot" style="background:#6b3fa0"></span>QuoteIQ — AI Intel</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="interest" value="Custom Platform">
-            <div class="custom-check"></div>
-            <span class="checkbox-label">Custom Platform</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" name="interest" value="General Enquiry">
-            <div class="custom-check"></div>
-            <span class="checkbox-label">General Enquiry</span>
-          </label>
-        </div>
-        <div class="field-error" id="interestErr">Please select at least one product/interest.</div>
-      </div>
- 
-      <div class="form-field">
-        <label class="form-label">Your Message <span class="req">*</span></label>
-        <textarea id="message" class="form-input" placeholder="Tell us about your business, what you're currently using, and what problem you're trying to solve..."></textarea>
-        <div class="field-error" id="messageErr">Please enter your message.</div>
-      </div>
- 
-      <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">
-        <span id="btnText">Send Message</span>
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" id="btnArrow"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-    </div>
- 
-    <!-- Response Panel -->
-    <div class="response-panel" id="responsePanel">
-      <div class="rp-header">
-        <div class="rp-icon" id="rpIcon"></div>
-        <div class="rp-title" id="rpTitle"></div>
-      </div>
-      <div class="rp-body" id="rpBody"></div>
-      <div class="ai-response-area" id="aiArea" style="display:none">
-        <div class="ai-label">Srijan Labs Response</div>
-        <div class="ai-text" id="aiText"></div>
-      </div>
-    </div>
- 
-  </div>
-</div>
- 
-
- 
-<script>
-  // ── Custom checkbox interaction
-  document.querySelectorAll('.checkbox-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const cb = item.querySelector('input[type="checkbox"]');
-      cb.checked = !cb.checked;
-    });
-  });
- 
-  // ── Validation
-  function validate() {
-    let valid = true;
- 
-    const name = document.getElementById('name').value.trim();
-    const nameErr = document.getElementById('nameErr');
-    if (!name) { document.getElementById('name').classList.add('error'); nameErr.classList.add('visible'); valid = false; }
-    else { document.getElementById('name').classList.remove('error'); nameErr.classList.remove('visible'); }
- 
-    const mobile = document.getElementById('mobile').value.trim();
-    const mobileErr = document.getElementById('mobileErr');
-    if (!mobile || !/^[0-9]{10}$/.test(mobile.replace(/\s/g, ''))) { document.getElementById('mobile').classList.add('error'); mobileErr.classList.add('visible'); valid = false; }
-    else { document.getElementById('mobile').classList.remove('error'); mobileErr.classList.remove('visible'); }
- 
-    const email = document.getElementById('email').value.trim();
-    const emailErr = document.getElementById('emailErr');
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('email').classList.add('error'); emailErr.classList.add('visible'); valid = false; }
-    else { document.getElementById('email').classList.remove('error'); emailErr.classList.remove('visible'); }
- 
-    const interests = [...document.querySelectorAll('input[name="interest"]:checked')].map(c => c.value);
-    const interestErr = document.getElementById('interestErr');
-    if (!interests.length) { interestErr.classList.add('visible'); valid = false; }
-    else { interestErr.classList.remove('visible'); }
- 
-    const message = document.getElementById('message').value.trim();
-    const messageErr = document.getElementById('messageErr');
-    if (!message) { document.getElementById('message').classList.add('error'); messageErr.classList.add('visible'); valid = false; }
-    else { document.getElementById('message').classList.remove('error'); messageErr.classList.remove('visible'); }
- 
-    return valid;
-  }
- 
-  // ── Main submit handler
-  async function handleSubmit() {
-    if (!validate()) return;
- 
-    const btn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const btnArrow = document.getElementById('btnArrow');
-    const responsePanel = document.getElementById('responsePanel');
- 
-    // Set loading state
-    btn.disabled = true;
-    btnText.textContent = 'Sending...';
-    btnArrow.style.display = 'none';
-    const spinner = document.createElement('div');
-    spinner.className = 'spinner';
-    spinner.id = 'spinner';
-    btn.appendChild(spinner);
- 
-    // Collect form data
-    const data = {
-      name: document.getElementById('name').value.trim(),
-      mobile: document.getElementById('mobile').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      company: document.getElementById('company').value.trim() || 'Not provided',
-      bizType: document.getElementById('bizType').value || 'Not specified',
-      interests: [...document.querySelectorAll('input[name="interest"]:checked')].map(c => c.value),
-      message: document.getElementById('message').value.trim(),
-    };
- 
-    const prompt = `You are the helpful and warm AI assistant for Srijan Labs — a company that builds AI-enabled SaaS platforms for MSME digitisation in India. Products: Quicksy (commerce/WhatsApp-first), Quotsy (quotation & billing), Stocksy (construction operations), QuoteIQ (AI procurement intelligence).
- 
-A potential customer just submitted a contact form. Here is their inquiry:
- 
-Name: ${data.name}
-Mobile: ${data.mobile}
-Email: ${data.email}
-Company: ${data.company}
-Business Type: ${data.bizType}
-Interested In: ${data.interests.join(', ')}
-Message: ${data.message}
- 
-Write a warm, personalised, professional response (4-6 sentences) that:
-1. Addresses them by first name
-2. Acknowledges their specific business type and interest
-3. Briefly mentions how the relevant Srijan Labs product(s) can help their specific situation
-4. Tells them Rahul will personally follow up on their mobile/email within 24 hours
-5. Ends with an encouraging, action-oriented closing
- 
-Keep it conversational, not robotic. No bullet points. Plain paragraphs only.`;
- 
-    try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 1000,
-          messages: [{ role: 'user', content: prompt }]
-        })
-      });
- 
-      const result = await response.json();
-      const aiReply = result.content?.[0]?.text || '';
- 
-      // Show success state
-      btn.style.display = 'none';
-      responsePanel.className = 'response-panel visible success';
-      document.getElementById('rpIcon').textContent = '✅';
-      document.getElementById('rpTitle').textContent = 'Message received!';
-      document.getElementById('rpBody').textContent = `Thank you ${data.name}! Your enquiry has been submitted. Here's a personalised note from our team:`;
- 
-      // Typewriter effect for AI response
-      const aiArea = document.getElementById('aiArea');
-      const aiText = document.getElementById('aiText');
-      aiArea.style.display = 'block';
- 
-      let i = 0;
-      aiText.textContent = '';
-      const chars = aiReply.split('');
-      const typeInterval = setInterval(() => {
-        if (i < chars.length) {
-          aiText.textContent += chars[i];
-          i++;
-        } else {
-          clearInterval(typeInterval);
-          // Show reset button after typing finishes
-          const resetBtn = document.createElement('button');
-          resetBtn.textContent = 'Submit another enquiry';
-          resetBtn.style.cssText = 'margin-top:16px;font-family:Geist,sans-serif;font-size:13px;font-weight:600;padding:9px 18px;background:var(--orange-light);color:var(--orange);border:1.5px solid var(--orange-border);border-radius:8px;cursor:pointer;transition:all 0.15s;';
-          resetBtn.onmouseenter = () => { resetBtn.style.background = 'var(--orange)'; resetBtn.style.color = '#fff'; };
-          resetBtn.onmouseleave = () => { resetBtn.style.background = 'var(--orange-light)'; resetBtn.style.color = 'var(--orange)'; };
-          resetBtn.onclick = resetForm;
-          responsePanel.appendChild(resetBtn);
-        }
-      }, 18);
- 
-    } catch (err) {
-      // Show error state
-      btn.disabled = false;
-      btnText.textContent = 'Send Message';
-      btnArrow.style.display = '';
-      document.getElementById('spinner')?.remove();
- 
-      responsePanel.className = 'response-panel visible error-state';
-      document.getElementById('rpIcon').textContent = '⚠️';
-      document.getElementById('rpTitle').textContent = 'Something went wrong';
-      document.getElementById('rpBody').innerHTML = `We couldn't process your submission right now. Please email us directly at <a href="mailto:Rahul@srijanlabs.in" style="color:var(--orange)">Rahul@srijanlabs.in</a> or call <strong>9321471113</strong>.`;
- 
-      // Keep button available
-      btn.disabled = false;
-      btnText.textContent = 'Try Again';
-      btnArrow.style.display = '';
-    }
-  }
- 
-  function resetForm() {
-    document.getElementById('contactForm').querySelectorAll('input, textarea, select').forEach(el => {
-      if (el.type === 'checkbox') el.checked = false;
-      else el.value = '';
-      el.classList.remove('error');
-    });
-    document.querySelectorAll('.field-error').forEach(e => e.classList.remove('visible'));
-    const btn = document.getElementById('submitBtn');
-    btn.style.display = '';
-    btn.disabled = false;
-    document.getElementById('btnText').textContent = 'Send Message';
-    document.getElementById('btnArrow').style.display = '';
-    document.getElementById('spinner')?.remove();
-    const rp = document.getElementById('responsePanel');
-    rp.className = 'response-panel';
-    rp.querySelectorAll('button').forEach(b => b.remove());
-    document.getElementById('aiArea').style.display = 'none';
-    document.getElementById('aiText').textContent = '';
-  }
-</script>
+</section>
 
 <!-- ══════════════════ CTA BANNER ══════════════════ -->
 <section class="cta-section">
@@ -1540,10 +1088,10 @@ Keep it conversational, not robotic. No bullet points. Plain paragraphs only.`;
       <div>
         <div class="footer-col-title">Solutions</div>
         <div class="footer-links">
-      <!--    <a href="#">Digital Transformation</a>
+          <a href="#">Digital Transformation</a>
           <a href="#">Commerce Platforms</a>
           <a href="#">AI Workflows</a>
-          <a href="#">MSME Systems</a> -->
+          <a href="#">MSME Systems</a>
         </div>
       </div>
       <div>
