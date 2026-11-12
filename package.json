@@ -1,0 +1,26 @@
+{
+  "name": "srijanlabs-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --env-file-if-exists=.env --watch server.js",
+    "preview:local": "node local-preview.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1167.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.4",
+    "multer": "^2.5.0",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.2"
+  }
+}

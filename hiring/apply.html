@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Careers — Srijan Labs</title>
+    <meta
+      name="description"
+      content="Build useful technology for growing businesses. Explore opportunities and apply to join Srijan Labs."
+    />
+    <link rel="stylesheet" href="/hiring/hiring.css" />
+    <script src="/hiring/apply.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/"
+          ><img src="/srijan-labs-1.png" alt="" />Srijan Labs</a
+        >
+        <div class="nav-links">
+          <a class="desktop-link" href="/#products">Our products</a
+          ><a href="/contact.html">Contact</a
+          ><a href="/apply" aria-current="page">Apply ↗</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Careers at Srijan Labs</p>
+          <h1>
+            Build something<br /><span>that moves business forward.</span>
+          </h1>
+          <p class="intro">
+            Help us make everyday work simpler for growing businesses. Bring
+            your curiosity, your craft, and your ideas.
+          </p>
+          <a class="button secondary top-space" href="#open-positions"
+            >Explore opportunities ↓</a
+          >
+        </div>
+      </div>
+      <div class="wrap">
+        <section
+          class="section"
+          id="open-positions"
+          aria-labelledby="positions-heading"
+        >
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Find your next chapter</p>
+              <h2 id="positions-heading">Open positions</h2>
+            </div>
+            <span class="badge" id="role-count">Loading</span>
+          </div>
+          <div id="positions-state" class="empty" role="status">
+            Loading opportunities…
+          </div>
+          <div class="cards" id="positions"></div>
+        </section>
+        <section
+          class="section apply-grid"
+          id="application-form"
+          aria-labelledby="form-heading"
+        >
+          <div>
+            <p class="eyebrow">Let’s get to know you</p>
+            <h2 id="form-heading">Your next step<br />starts here.</h2>
+            <p class="muted">
+              Found your fit? Apply below. If you don’t see the right role, send
+              us a general application.
+            </p>
+            <ol class="steps">
+              <li>Tell us a little about yourself.</li>
+              <li>Share your résumé and interests.</li>
+              <li>We’ll reach out if there’s a match.</li>
+            </ol>
+          </div>
+          <div>
+            <div id="form-notice" class="notice" role="alert" hidden></div>
+            <form id="apply-form" class="form-card" novalidate>
+              <h3>Send your application</h3>
+              <p class="hint" style="margin-bottom: 24px">
+                All fields are required.
+              </p>
+              <fieldset
+                id="application-fields"
+                style="border: 0; padding: 0; margin: 0"
+                disabled
+              >
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="name">Full name</label
+                    ><input
+                      id="name"
+                      name="name"
+                      autocomplete="name"
+                      maxlength="120"
+                      required
+                      placeholder="Your full name"
+                      aria-describedby="name-error"
+                    /><span class="field-error" id="name-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email address</label
+                    ><input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      maxlength="254"
+                      required
+                      placeholder="you@example.com"
+                      aria-describedby="email-error"
+                    /><span class="field-error" id="email-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone number</label
+                    ><input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      maxlength="40"
+                      required
+                      placeholder="+91 98765 43210"
+                      aria-describedby="phone-error"
+                    /><span class="field-error" id="phone-error"></span>
+                  </div>
+                  <div class="field">
+                    <label for="role">Applying for</label
+                    ><select
+                      id="role"
+                      name="role"
+                      aria-describedby="role-error"
+                    >
+                      <option value="general">
+                        General application
+                      </option></select
+                    ><span class="field-error" id="role-error"></span>
+                  </div>
+                  <div class="field full">
+                    <label for="resume">Your résumé</label>
+                    <div class="upload" id="upload-zone">
+                      <strong>Give us a glimpse of your work</strong>
+                      <p class="hint">
+                        Choose a file or drop it here. PDF only, up to 5 MB.
+                      </p>
+                      <input
+                        type="file"
+                        id="resume"
+                        name="resume"
+                        accept=".pdf,application/pdf"
+                        required
+                        aria-describedby="resume-error"
+                      />
+                      <div class="file-row" id="file-row" hidden>
+                        <span id="file-name"></span
+                        ><button
+                          type="button"
+                          id="remove-file"
+                          class="link-button"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                    <span class="field-error" id="resume-error"></span>
+                  </div>
+                </div>
+                <div class="trap" aria-hidden="true">
+                  <label for="website">Leave this blank</label
+                  ><input
+                    name="website"
+                    id="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+                <p class="privacy">
+                  By submitting, you share your details and résumé with Srijan
+                  Labs for recruitment. To request deletion, email
+                  <a href="mailto:Rahul@srijanlabs.in">Rahul@srijanlabs.in</a>.
+                </p>
+                <button
+                  class="button submit"
+                  type="submit"
+                  id="submit-application"
+                >
+                  Submit application ↗
+                </button>
+              </fieldset>
+            </form>
+            <div id="success" class="form-card success" tabindex="-1" hidden>
+              <div class="success-icon" aria-hidden="true">✓</div>
+              <p class="eyebrow">Thank you for reaching out</p>
+              <h2>Application received.</h2>
+              <p id="success-message" class="muted"></p>
+              <p class="hint" id="reference"></p>
+              <a href="/" class="button secondary top-space"
+                >Back to Srijan Labs →</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <span>© Srijan Labs · Built for businesses. Powered by people.</span
+        ><a href="/contact.html">Get in touch ↗</a>
+      </div>
+    </footer>
+  </body>
+</html>

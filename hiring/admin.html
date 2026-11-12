@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Hiring dashboard — Srijan Labs</title>
+    <link rel="stylesheet" href="/hiring/hiring.css" />
+    <script src="/hiring/admin.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Admin navigation">
+        <a class="brand" href="/"
+          ><img src="/srijan-labs-1.png" alt="" />Srijan Labs</a
+        >
+        <div class="nav-links">
+          <a href="/apply">View careers page ↗</a
+          ><button id="logout" class="button secondary" hidden>Sign out</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="login-wrap" id="login-panel">
+        <div class="form-card">
+          <p class="eyebrow">Team access</p>
+          <h1>Hiring starts here.</h1>
+          <p class="muted">
+            Sign in to manage opportunities and meet your next teammate.
+          </p>
+          <div id="login-message" class="notice" role="alert" hidden></div>
+          <form id="login-form" hidden>
+            <label for="password">Admin password</label>
+            <div class="password-row">
+              <input
+                id="password"
+                type="password"
+                autocomplete="current-password"
+                required
+              /><button
+                type="button"
+                id="show-password"
+                class="button secondary"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+            <button class="button submit top-space" id="login-button">
+              Sign in →
+            </button>
+            <p class="hint">Your session lasts 12 hours.</p>
+          </form>
+          <p id="session-loading" class="hint">Checking access…</p>
+        </div>
+      </div>
+      <div class="wrap dashboard" id="dashboard" hidden>
+        <p class="eyebrow">Srijan Labs · Hiring workspace</p>
+        <h1>Good people. Great possibilities.</h1>
+        <p class="muted">
+          Manage your open roles and the people behind every application.
+        </p>
+        <div id="dashboard-notice" class="notice" role="alert" hidden></div>
+        <div class="tabs" role="tablist" aria-label="Hiring management">
+          <button
+            id="applications-tab"
+            class="tab"
+            role="tab"
+            aria-selected="true"
+            aria-controls="applications-panel"
+          >
+            Applications</button
+          ><button
+            id="positions-tab"
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="positions-panel"
+            tabindex="-1"
+          >
+            Positions
+          </button>
+        </div>
+        <section
+          id="applications-panel"
+          role="tabpanel"
+          aria-labelledby="applications-tab"
+        >
+          <div class="toolbar">
+            <input
+              type="search"
+              id="search"
+              placeholder="Search name, email or phone…"
+              aria-label="Search applications"
+            /><select id="filter-role" aria-label="Filter applications by role">
+              <option value="">All roles</option>
+            </select>
+          </div>
+          <p id="application-count" class="hint" aria-live="polite"></p>
+          <div id="applications-list" class="top-space"></div>
+          <div class="pagination">
+            <button class="button secondary" id="previous">← Previous</button
+            ><span id="page-label"></span
+            ><button class="button secondary" id="next">Next →</button>
+          </div>
+        </section>
+        <section
+          id="positions-panel"
+          role="tabpanel"
+          aria-labelledby="positions-tab"
+          hidden
+        >
+          <div class="section-head">
+            <div>
+              <h2>Your positions</h2>
+              <p class="muted">Open a door for your next teammate.</p>
+            </div>
+            <button class="button" id="add-role">+ Add position</button>
+          </div>
+          <div id="positions-list" class="cards"></div>
+        </section>
+      </div>
+    </main>
+    <dialog id="role-dialog" aria-labelledby="role-dialog-title">
+      <div class="dialog-head">
+        <h2 id="role-dialog-title">Add position</h2>
+        <button class="close" data-close="role-dialog" aria-label="Close">
+          ×
+        </button>
+      </div>
+      <form id="role-form">
+        <div id="role-error" class="notice" role="alert" hidden></div>
+        <div class="field">
+          <label for="role-title">Role title</label
+          ><input id="role-title" maxlength="120" required />
+        </div>
+        <div class="form-grid">
+          <div>
+            <label for="role-location">Location</label
+            ><input
+              id="role-location"
+              maxlength="120"
+              placeholder="Navi Mumbai / Remote"
+              required
+            />
+          </div>
+          <div>
+            <label for="role-type">Employment type</label
+            ><select id="role-type">
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Contract</option>
+              <option>Internship</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="role-description">Description</label
+            ><textarea
+              id="role-description"
+              rows="7"
+              maxlength="10000"
+              required
+              placeholder="What they’ll do, what you’re looking for, and what makes the role special."
+            ></textarea>
+          </div>
+        </div>
+        <label class="check-label"
+          ><input type="checkbox" id="role-open" checked />Open for
+          applications</label
+        ><button class="button submit" id="save-role">Save position</button>
+      </form>
+    </dialog>
+    <dialog id="detail-dialog" aria-labelledby="detail-title">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">Application details</p>
+          <h2 id="detail-title"></h2>
+        </div>
+        <button class="close" data-close="detail-dialog" aria-label="Close">
+          ×
+        </button>
+      </div>
+      <dl id="detail-list" class="detail-list"></dl>
+      <div class="actions">
+        <a id="download-resume" class="button">Download résumé ↓</a
+        ><button id="delete-application" class="button danger">
+          Delete application
+        </button>
+      </div>
+    </dialog>
+    <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Confirm deletion</h2>
+      <p id="confirm-message" class="muted"></p>
+      <div id="confirm-error" class="notice" role="alert" hidden></div>
+      <div class="actions">
+        <button class="button secondary" data-close="confirm-dialog">
+          Cancel</button
+        ><button id="confirm-delete" class="button danger">
+          Delete permanently
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>
