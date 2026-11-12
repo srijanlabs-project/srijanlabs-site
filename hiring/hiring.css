@@ -105,7 +105,7 @@ select:focus-visible {
   padding: 0 28px;
 }
 .hero {
-  padding: 82px 0 62px;
+  padding: 38px 0 28px;
   border-bottom: 1px solid var(--line);
   background: radial-gradient(ellipse at 95% 0%, #e8601a14, transparent 60%);
 }
